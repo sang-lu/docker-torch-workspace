@@ -1,4 +1,4 @@
-FROM sanglu/torch:cuda-12.1.0
+FROM sanglu/torch:cuda-12.1.1
 
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 
