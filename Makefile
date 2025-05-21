@@ -1,0 +1,14 @@
+build-118:
+	docker build -t sanglu/torch-workspace:cuda-11.8.0 -f cuda-118.Dockerfile .
+
+build-push-118: build-118
+	docker push sanglu/torch-workspace:cuda-11.8.0
+
+build-121:
+	docker build -t sanglu/torch-workspace:cuda-12.1.0 -f cuda-121.Dockerfile .
+
+build-push-121: build-121
+	docker push sanglu/torch-workspace:cuda-12.1.0
+
+build-all: build-118 build-121
+build-push-all: build-push-118 build-push-121
