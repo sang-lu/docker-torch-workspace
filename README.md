@@ -6,6 +6,8 @@ This repository provides Dockerfiles for building development environments with 
 
 - `sanglu/torch-workspace:cuda-11.8.0`
 - `sanglu/torch-workspace:cuda-12.1.1`
+- `sanglu/torch-workspace:cuda-12.4.1`
+- `sanglu/torch-workspace:cuda-12.8.1`
 
 ## Build Docker Images
 
@@ -17,6 +19,12 @@ make build-118
 
 # Build CUDA 12.1 image
 make build-121
+
+# Build CUDA 12.4 image
+make build-124
+
+# Build CUDA 12.8 image
+make build-128
 
 # Build all images
 make build-all
@@ -33,6 +41,12 @@ make build-push-118
 # Push CUDA 12.1 image
 make build-push-121
 
+# Push CUDA 12.4 image
+make build-push-124
+
+# Push CUDA 12.8 image
+make build-push-128
+
 # Push all images
 make build-push-all
 ```
@@ -42,10 +56,10 @@ make build-push-all
 To run the image and start code-server (listening on port 8080):
 
 ```sh
-docker run -it --gpus all -p 8080:8080 sanglu/torch-workspace:cuda-12.1.1
+docker run -it --gpus all -p 8080:8080 sanglu/torch-workspace:cuda-12.8.1
 ```
 
-Replace the tag with `cuda-11.8.0` if you want to use the CUDA 11.8 image.
+Replace the tag with `cuda-12.4.1` if you want to use the CUDA 12.4.1 image.
 
 Access code-server at: [http://localhost:8080](http://localhost:8080)
 
